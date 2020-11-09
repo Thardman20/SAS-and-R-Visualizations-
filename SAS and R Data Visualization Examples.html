@@ -1,0 +1,2337 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns:mv="http://macVmlSchemaUri" xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta name=Title content="">
+<meta name=Keywords content="">
+<meta http-equiv=Content-Type content="text/html; charset=macintosh">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 15">
+<meta name=Originator content="Microsoft Word 15">
+<link rel=File-List
+href="SAS%20and%20R%20Data%20Visualization%20Examples.fld/filelist.xml">
+<link rel=Edit-Time-Data
+href="SAS%20and%20R%20Data%20Visualization%20Examples.fld/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Thomas J Hardman</o:Author>
+  <o:LastAuthor>Thomas J Hardman</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>2</o:TotalTime>
+  <o:Created>2020-04-12T23:19:00Z</o:Created>
+  <o:LastSaved>2020-04-12T23:19:00Z</o:LastSaved>
+  <o:Pages>10</o:Pages>
+  <o:Words>635</o:Words>
+  <o:Characters>3623</o:Characters>
+  <o:Lines>30</o:Lines>
+  <o:Paragraphs>8</o:Paragraphs>
+  <o:CharactersWithSpaces>4250</o:CharactersWithSpaces>
+  <o:Version>15.0</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+  <o:PixelsPerInch>96</o:PixelsPerInch>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+<link rel=themeData
+href="SAS%20and%20R%20Data%20Visualization%20Examples.fld/themedata.thmx">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Print</w:View>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:EnableOpenTypeKerning/>
+   <w:DontFlipMirrorIndents/>
+   <w:OverrideTableStyleHps/>
+  </w:Compatibility>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
+  DefSemiHidden="false" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="382">
+  <w:LsdException Locked="false" Priority="0" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 9"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="header"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footer"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index heading"/>
+  <w:LsdException Locked="false" Priority="35" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of figures"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope return"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="line number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="page number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of authorities"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="macro"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="toa heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 5"/>
+  <w:LsdException Locked="false" Priority="10" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Closing"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Signature"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Message Header"/>
+  <w:LsdException Locked="false" Priority="11" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Salutation"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Date"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Note Heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Block Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Hyperlink"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="FollowedHyperlink"/>
+  <w:LsdException Locked="false" Priority="22" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Document Map"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Plain Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="E-mail Signature"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Top of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Bottom of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal (Web)"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Acronym"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Cite"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Code"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Definition"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Keyboard"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Preformatted"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Sample"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Typewriter"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Variable"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Table"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation subject"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="No List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Contemporary"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Elegant"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Professional"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Balloon Text"/>
+  <w:LsdException Locked="false" Priority="39" Name="Table Grid"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Theme"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Note Level 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Note Level 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Note Level 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Note Level 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Note Level 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Note Level 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Note Level 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Note Level 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Note Level 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" QFormat="true"
+   Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" QFormat="true"
+   Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" QFormat="true"
+   Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" QFormat="true"
+   Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" QFormat="true"
+   Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" QFormat="true"
+   Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="TOC Heading"/>
+  <w:LsdException Locked="false" Priority="41" Name="Plain Table 1"/>
+  <w:LsdException Locked="false" Priority="42" Name="Plain Table 2"/>
+  <w:LsdException Locked="false" Priority="43" Name="Plain Table 3"/>
+  <w:LsdException Locked="false" Priority="44" Name="Plain Table 4"/>
+  <w:LsdException Locked="false" Priority="45" Name="Plain Table 5"/>
+  <w:LsdException Locked="false" Priority="40" Name="Grid Table Light"/>
+  <w:LsdException Locked="false" Priority="46" Name="Grid Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="Grid Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="Grid Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="46" Name="List Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="List Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="List Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Mention"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Smart Hyperlink"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:"Courier New";
+	panose-1:2 7 3 9 2 2 5 2 4 4;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:-536859905 -1073711037 9 0 511 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:1;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:variable;
+	mso-font-signature:0 0 0 0 0 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1073786111 1 0 415 0;}
+@font-face
+	{font-family:"Lucida Grande";
+	panose-1:2 11 6 0 4 5 2 2 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:-520090897 1342218751 0 0 447 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Calibri;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+span.textcell
+	{mso-style-name:textcell;
+	mso-style-unhide:no;}
+span.numbercell
+	{mso-style-name:numbercell;
+	mso-style-unhide:no;}
+p.p1, li.p1, div.p1
+	{mso-style-name:p1;
+	mso-style-unhide:no;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:7.5pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;}
+p.p2, li.p2, div.p2
+	{mso-style-name:p2;
+	mso-style-unhide:no;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:7.5pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	color:#942193;}
+p.p3, li.p3, div.p3
+	{mso-style-name:p3;
+	mso-style-unhide:no;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:7.5pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	color:#0433FF;}
+p.p4, li.p4, div.p4
+	{mso-style-name:p4;
+	mso-style-unhide:no;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:7.5pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	color:#011993;}
+p.p5, li.p5, div.p5
+	{mso-style-name:p5;
+	mso-style-unhide:no;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:7.5pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;}
+span.s1
+	{mso-style-name:s1;
+	mso-style-unhide:no;
+	color:#011993;}
+span.s2
+	{mso-style-name:s2;
+	mso-style-unhide:no;
+	color:black;}
+span.s3
+	{mso-style-name:s3;
+	mso-style-unhide:no;
+	color:#0433FF;}
+span.s4
+	{mso-style-name:s4;
+	mso-style-unhide:no;
+	color:#009193;}
+span.apple-tab-span
+	{mso-style-name:apple-tab-span;
+	mso-style-unhide:no;}
+span.apple-converted-space
+	{mso-style-name:apple-converted-space;
+	mso-style-unhide:no;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-family:Calibri;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Calibri;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1040"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US style='tab-interval:.5in'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>1.) <o:p></o:p></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>a.) </p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=236
+ style='width:235.5pt;mso-cellspacing:0in;mso-yfti-tbllook:1184'>
+ <thead>
+  <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+   <td width=122 colspan=2 style='width:122.25pt;border-top:none;border-left:
+   none;border-bottom:solid #D6DADC 1.0pt;border-right:solid #D6DADC 1.0pt;
+   mso-border-bottom-alt:solid #D6DADC .75pt;mso-border-right-alt:solid #D6DADC .75pt;
+   background:#F7F8F9;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+   <p class=MsoNormal><b><span style='font-size:8.5pt;font-family:"Times New Roman";
+   mso-fareast-font-family:"Times New Roman";color:black'>Country<o:p></o:p></span></b></p>
+   </td>
+   <td width=56 colspan=2 style='width:55.5pt;border-top:none;border-left:none;
+   border-bottom:solid #D6DADC 1.0pt;border-right:solid #D6DADC 1.0pt;
+   mso-border-bottom-alt:solid #D6DADC .75pt;mso-border-right-alt:solid #D6DADC .75pt;
+   background:#F7F8F9;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+   <p class=MsoNormal><b><span style='font-size:8.5pt;font-family:"Times New Roman";
+   mso-fareast-font-family:"Times New Roman";color:black'>CO2<o:p></o:p></span></b></p>
+   </td>
+  </tr>
+  <tr style='mso-yfti-irow:1'>
+   <td width=33 style='width:33.0pt;border-top:none;border-left:none;
+   border-bottom:solid #D6DADC 1.0pt;border-right:solid #D6DADC 1.0pt;
+   mso-border-bottom-alt:solid #D6DADC .25pt;mso-border-right-alt:solid #D6DADC .75pt;
+   background:#F7F8F9;padding:0in 3.75pt 0in 3.75pt'></td>
+   <td width=122 colspan=2 style='width:122.25pt;border-top:none;border-left:
+   none;border-bottom:solid #D6DADC 1.0pt;border-right:solid #D6DADC 1.0pt;
+   mso-border-bottom-alt:solid #D6DADC .25pt;mso-border-right-alt:solid #D6DADC .75pt;
+   background:#F7F8F9;padding:0in 3.75pt 0in 3.75pt'></td>
+   <td width=56 style='width:55.5pt;border-top:none;border-left:none;
+   border-bottom:solid #D6DADC 1.0pt;border-right:solid #D6DADC 1.0pt;
+   mso-border-bottom-alt:solid #D6DADC .25pt;mso-border-right-alt:solid #D6DADC .75pt;
+   background:#F7F8F9;padding:0in 3.75pt 0in 3.75pt'></td>
+  </tr>
+ </thead>
+ <tr style='mso-yfti-irow:2;height:17.25pt'>
+  <td nowrap style='border-top:none;border-left:none;border-bottom:solid #D6DADC 1.0pt;
+  border-right:solid #D6DADC 1.0pt;mso-border-bottom-alt:solid #D6DADC .75pt;
+  mso-border-right-alt:solid #D6DADC .75pt;background:#F4F8F9;padding:3.0pt 3.75pt 3.0pt 3.75pt;
+  height:17.25pt'>
+  <p class=MsoNormal align=right style='margin-bottom:27.0pt;text-align:right'><b><span
+  style='font-size:8.5pt;font-family:"Times New Roman";mso-fareast-font-family:
+  "Times New Roman";color:black'>1<o:p></o:p></span></b></p>
+  </td>
+  <td nowrap colspan=2 style='border-top:none;border-left:none;border-bottom:
+  solid #D6DADC 1.0pt;border-right:solid #D6DADC 1.0pt;mso-border-bottom-alt:
+  solid #D6DADC .75pt;mso-border-right-alt:solid #D6DADC .75pt;padding:3.0pt 3.75pt 3.0pt 3.75pt;
+  height:17.25pt'>
+  <p class=MsoNormal style='margin-bottom:27.0pt'><span style='font-size:8.5pt;
+  font-family:"Times New Roman";mso-fareast-font-family:"Times New Roman"'>Afghanistan<o:p></o:p></span></p>
+  </td>
+  <td nowrap style='border-top:none;border-left:none;border-bottom:solid #D6DADC 1.0pt;
+  border-right:solid #D6DADC 1.0pt;mso-border-bottom-alt:solid #D6DADC .75pt;
+  mso-border-right-alt:solid #D6DADC .75pt;padding:3.0pt 3.75pt 3.0pt 3.75pt;
+  height:17.25pt'>
+  <p class=MsoNormal style='margin-bottom:27.0pt'><span style='font-size:8.5pt;
+  font-family:"Times New Roman";mso-fareast-font-family:"Times New Roman"'>0.36630200<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;height:17.25pt'>
+  <td nowrap style='border-top:none;border-left:none;border-bottom:solid #D6DADC 1.0pt;
+  border-right:solid #D6DADC 1.0pt;mso-border-bottom-alt:solid #D6DADC .75pt;
+  mso-border-right-alt:solid #D6DADC .75pt;background:#F4F8F9;padding:3.0pt 3.75pt 3.0pt 3.75pt;
+  height:17.25pt'>
+  <p class=MsoNormal align=right style='margin-bottom:27.0pt;text-align:right'><b><span
+  style='font-size:8.5pt;font-family:"Times New Roman";mso-fareast-font-family:
+  "Times New Roman";color:black'>2<o:p></o:p></span></b></p>
+  </td>
+  <td nowrap colspan=2 style='border-top:none;border-left:none;border-bottom:
+  solid #D6DADC 1.0pt;border-right:solid #D6DADC 1.0pt;mso-border-bottom-alt:
+  solid #D6DADC .75pt;mso-border-right-alt:solid #D6DADC .75pt;padding:3.0pt 3.75pt 3.0pt 3.75pt;
+  height:17.25pt'>
+  <p class=MsoNormal style='margin-bottom:27.0pt'><span style='font-size:8.5pt;
+  font-family:"Times New Roman";mso-fareast-font-family:"Times New Roman"'>Albania<o:p></o:p></span></p>
+  </td>
+  <td nowrap style='border-top:none;border-left:none;border-bottom:solid #D6DADC 1.0pt;
+  border-right:solid #D6DADC 1.0pt;mso-border-bottom-alt:solid #D6DADC .75pt;
+  mso-border-right-alt:solid #D6DADC .75pt;padding:3.0pt 3.75pt 3.0pt 3.75pt;
+  height:17.25pt'>
+  <p class=MsoNormal style='margin-bottom:27.0pt'><span style='font-size:8.5pt;
+  font-family:"Times New Roman";mso-fareast-font-family:"Times New Roman"'>2.17706481<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;height:17.25pt'>
+  <td nowrap style='border-top:none;border-left:none;border-bottom:solid #D6DADC 1.0pt;
+  border-right:solid #D6DADC 1.0pt;mso-border-bottom-alt:solid #D6DADC .75pt;
+  mso-border-right-alt:solid #D6DADC .75pt;background:#F4F8F9;padding:3.0pt 3.75pt 3.0pt 3.75pt;
+  height:17.25pt'>
+  <p class=MsoNormal align=right style='margin-bottom:27.0pt;text-align:right'><b><span
+  style='font-size:8.5pt;font-family:"Times New Roman";mso-fareast-font-family:
+  "Times New Roman";color:black'>3<o:p></o:p></span></b></p>
+  </td>
+  <td nowrap colspan=2 style='border-top:none;border-left:none;border-bottom:
+  solid #D6DADC 1.0pt;border-right:solid #D6DADC 1.0pt;mso-border-bottom-alt:
+  solid #D6DADC .75pt;mso-border-right-alt:solid #D6DADC .75pt;padding:3.0pt 3.75pt 3.0pt 3.75pt;
+  height:17.25pt'>
+  <p class=MsoNormal style='margin-bottom:27.0pt'><span style='font-size:8.5pt;
+  font-family:"Times New Roman";mso-fareast-font-family:"Times New Roman"'>Algeria<o:p></o:p></span></p>
+  </td>
+  <td nowrap style='border-top:none;border-left:none;border-bottom:solid #D6DADC 1.0pt;
+  border-right:solid #D6DADC 1.0pt;mso-border-bottom-alt:solid #D6DADC .75pt;
+  mso-border-right-alt:solid #D6DADC .75pt;padding:3.0pt 3.75pt 3.0pt 3.75pt;
+  height:17.25pt'>
+  <p class=MsoNormal style='margin-bottom:27.0pt'><span style='font-size:8.5pt;
+  font-family:"Times New Roman";mso-fareast-font-family:"Times New Roman"'>3.64371120<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;height:17.25pt'>
+  <td nowrap style='border-top:none;border-left:none;border-bottom:solid #D6DADC 1.0pt;
+  border-right:solid #D6DADC 1.0pt;mso-border-bottom-alt:solid #D6DADC .75pt;
+  mso-border-right-alt:solid #D6DADC .75pt;background:#F4F8F9;padding:3.0pt 3.75pt 3.0pt 3.75pt;
+  height:17.25pt'>
+  <p class=MsoNormal align=right style='margin-bottom:27.0pt;text-align:right'><b><span
+  style='font-size:8.5pt;font-family:"Times New Roman";mso-fareast-font-family:
+  "Times New Roman";color:black'>4<o:p></o:p></span></b></p>
+  </td>
+  <td nowrap colspan=2 style='border-top:none;border-left:none;border-bottom:
+  solid #D6DADC 1.0pt;border-right:solid #D6DADC 1.0pt;mso-border-bottom-alt:
+  solid #D6DADC .75pt;mso-border-right-alt:solid #D6DADC .75pt;padding:3.0pt 3.75pt 3.0pt 3.75pt;
+  height:17.25pt'>
+  <p class=MsoNormal style='margin-bottom:27.0pt'><span style='font-size:8.5pt;
+  font-family:"Times New Roman";mso-fareast-font-family:"Times New Roman"'>Andorra<o:p></o:p></span></p>
+  </td>
+  <td nowrap style='border-top:none;border-left:none;border-bottom:solid #D6DADC 1.0pt;
+  border-right:solid #D6DADC 1.0pt;mso-border-bottom-alt:solid #D6DADC .75pt;
+  mso-border-right-alt:solid #D6DADC .75pt;padding:3.0pt 3.75pt 3.0pt 3.75pt;
+  height:17.25pt'>
+  <p class=MsoNormal style='margin-bottom:27.0pt'><span style='font-size:8.5pt;
+  font-family:"Times New Roman";mso-fareast-font-family:"Times New Roman"'>6.75870604<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6;height:17.25pt'>
+  <td nowrap style='border-top:none;border-left:none;border-bottom:solid #D6DADC 1.0pt;
+  border-right:solid #D6DADC 1.0pt;mso-border-bottom-alt:solid #D6DADC .75pt;
+  mso-border-right-alt:solid #D6DADC .75pt;background:#F4F8F9;padding:3.0pt 3.75pt 3.0pt 3.75pt;
+  height:17.25pt'>
+  <p class=MsoNormal align=right style='margin-bottom:27.0pt;text-align:right'><b><span
+  style='font-size:8.5pt;font-family:"Times New Roman";mso-fareast-font-family:
+  "Times New Roman";color:black'>5<o:p></o:p></span></b></p>
+  </td>
+  <td nowrap colspan=2 style='border-top:none;border-left:none;border-bottom:
+  solid #D6DADC 1.0pt;border-right:solid #D6DADC 1.0pt;mso-border-bottom-alt:
+  solid #D6DADC .75pt;mso-border-right-alt:solid #D6DADC .75pt;padding:3.0pt 3.75pt 3.0pt 3.75pt;
+  height:17.25pt'>
+  <p class=MsoNormal style='margin-bottom:27.0pt'><span style='font-size:8.5pt;
+  font-family:"Times New Roman";mso-fareast-font-family:"Times New Roman"'>Angola<o:p></o:p></span></p>
+  </td>
+  <td nowrap style='border-top:none;border-left:none;border-bottom:solid #D6DADC 1.0pt;
+  border-right:solid #D6DADC 1.0pt;mso-border-bottom-alt:solid #D6DADC .75pt;
+  mso-border-right-alt:solid #D6DADC .75pt;padding:3.0pt 3.75pt 3.0pt 3.75pt;
+  height:17.25pt'>
+  <p class=MsoNormal style='margin-bottom:27.0pt'><span style='font-size:8.5pt;
+  font-family:"Times New Roman";mso-fareast-font-family:"Times New Roman"'>1.18821176<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7;height:17.25pt'>
+  <td nowrap style='border-top:none;border-left:none;border-bottom:solid #D6DADC 1.0pt;
+  border-right:solid #D6DADC 1.0pt;mso-border-bottom-alt:solid #D6DADC .75pt;
+  mso-border-right-alt:solid #D6DADC .75pt;background:#F4F8F9;padding:3.0pt 3.75pt 3.0pt 3.75pt;
+  height:17.25pt'>
+  <p class=MsoNormal align=right style='margin-bottom:27.0pt;text-align:right'><b><span
+  style='font-size:8.5pt;font-family:"Times New Roman";mso-fareast-font-family:
+  "Times New Roman";color:black'>6<o:p></o:p></span></b></p>
+  </td>
+  <td nowrap colspan=2 style='border-top:none;border-left:none;border-bottom:
+  solid #D6DADC 1.0pt;border-right:solid #D6DADC 1.0pt;mso-border-bottom-alt:
+  solid #D6DADC .75pt;mso-border-right-alt:solid #D6DADC .75pt;padding:3.0pt 3.75pt 3.0pt 3.75pt;
+  height:17.25pt'>
+  <p class=MsoNormal style='margin-bottom:27.0pt'><span style='font-size:8.5pt;
+  font-family:"Times New Roman";mso-fareast-font-family:"Times New Roman"'>Antigua&nbsp;and&nbsp;Barbuda<o:p></o:p></span></p>
+  </td>
+  <td nowrap style='border-top:none;border-left:none;border-bottom:solid #D6DADC 1.0pt;
+  border-right:solid #D6DADC 1.0pt;mso-border-bottom-alt:solid #D6DADC .75pt;
+  mso-border-right-alt:solid #D6DADC .75pt;padding:3.0pt 3.75pt 3.0pt 3.75pt;
+  height:17.25pt'>
+  <p class=MsoNormal style='margin-bottom:27.0pt'><span style='font-size:8.5pt;
+  font-family:"Times New Roman";mso-fareast-font-family:"Times New Roman"'>5.54146963<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8;height:17.25pt'>
+  <td nowrap style='border-top:none;border-left:none;border-bottom:solid #D6DADC 1.0pt;
+  border-right:solid #D6DADC 1.0pt;mso-border-bottom-alt:solid #D6DADC .75pt;
+  mso-border-right-alt:solid #D6DADC .75pt;background:#F4F8F9;padding:3.0pt 3.75pt 3.0pt 3.75pt;
+  height:17.25pt'>
+  <p class=MsoNormal align=right style='margin-bottom:27.0pt;text-align:right'><b><span
+  style='font-size:8.5pt;font-family:"Times New Roman";mso-fareast-font-family:
+  "Times New Roman";color:black'>7<o:p></o:p></span></b></p>
+  </td>
+  <td nowrap colspan=2 style='border-top:none;border-left:none;border-bottom:
+  solid #D6DADC 1.0pt;border-right:solid #D6DADC 1.0pt;mso-border-bottom-alt:
+  solid #D6DADC .75pt;mso-border-right-alt:solid #D6DADC .75pt;padding:3.0pt 3.75pt 3.0pt 3.75pt;
+  height:17.25pt'>
+  <p class=MsoNormal style='margin-bottom:27.0pt'><span style='font-size:8.5pt;
+  font-family:"Times New Roman";mso-fareast-font-family:"Times New Roman"'>Argentina<o:p></o:p></span></p>
+  </td>
+  <td nowrap style='border-top:none;border-left:none;border-bottom:solid #D6DADC 1.0pt;
+  border-right:solid #D6DADC 1.0pt;mso-border-bottom-alt:solid #D6DADC .75pt;
+  mso-border-right-alt:solid #D6DADC .75pt;padding:3.0pt 3.75pt 3.0pt 3.75pt;
+  height:17.25pt'>
+  <p class=MsoNormal style='margin-bottom:27.0pt'><span style='font-size:8.5pt;
+  font-family:"Times New Roman";mso-fareast-font-family:"Times New Roman"'>4.61528417<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9;height:17.25pt'>
+  <td nowrap style='border-top:none;border-left:none;border-bottom:solid #D6DADC 1.0pt;
+  border-right:solid #D6DADC 1.0pt;mso-border-bottom-alt:solid #D6DADC .75pt;
+  mso-border-right-alt:solid #D6DADC .75pt;background:#F4F8F9;padding:3.0pt 3.75pt 3.0pt 3.75pt;
+  height:17.25pt'>
+  <p class=MsoNormal align=right style='margin-bottom:27.0pt;text-align:right'><b><span
+  style='font-size:8.5pt;font-family:"Times New Roman";mso-fareast-font-family:
+  "Times New Roman";color:black'>8<o:p></o:p></span></b></p>
+  </td>
+  <td nowrap colspan=2 style='border-top:none;border-left:none;border-bottom:
+  solid #D6DADC 1.0pt;border-right:solid #D6DADC 1.0pt;mso-border-bottom-alt:
+  solid #D6DADC .75pt;mso-border-right-alt:solid #D6DADC .75pt;padding:3.0pt 3.75pt 3.0pt 3.75pt;
+  height:17.25pt'>
+  <p class=MsoNormal style='margin-bottom:27.0pt'><span style='font-size:8.5pt;
+  font-family:"Times New Roman";mso-fareast-font-family:"Times New Roman"'>Armenia<o:p></o:p></span></p>
+  </td>
+  <td nowrap style='border-top:none;border-left:none;border-bottom:solid #D6DADC 1.0pt;
+  border-right:solid #D6DADC 1.0pt;mso-border-bottom-alt:solid #D6DADC .75pt;
+  mso-border-right-alt:solid #D6DADC .75pt;padding:3.0pt 3.75pt 3.0pt 3.75pt;
+  height:17.25pt'>
+  <p class=MsoNormal style='margin-bottom:27.0pt'><span style='font-size:8.5pt;
+  font-family:"Times New Roman";mso-fareast-font-family:"Times New Roman"'>1.93021268<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10;height:17.25pt'>
+  <td nowrap style='border-top:none;border-left:none;border-bottom:solid #D6DADC 1.0pt;
+  border-right:solid #D6DADC 1.0pt;mso-border-bottom-alt:solid #D6DADC .75pt;
+  mso-border-right-alt:solid #D6DADC .75pt;background:#F4F8F9;padding:3.0pt 3.75pt 3.0pt 3.75pt;
+  height:17.25pt'>
+  <p class=MsoNormal align=right style='margin-bottom:27.0pt;text-align:right'><b><span
+  style='font-size:8.5pt;font-family:"Times New Roman";mso-fareast-font-family:
+  "Times New Roman";color:black'>9<o:p></o:p></span></b></p>
+  </td>
+  <td nowrap colspan=2 style='border-top:none;border-left:none;border-bottom:
+  solid #D6DADC 1.0pt;border-right:solid #D6DADC 1.0pt;mso-border-bottom-alt:
+  solid #D6DADC .75pt;mso-border-right-alt:solid #D6DADC .75pt;padding:3.0pt 3.75pt 3.0pt 3.75pt;
+  height:17.25pt'>
+  <p class=MsoNormal style='margin-bottom:27.0pt'><span style='font-size:8.5pt;
+  font-family:"Times New Roman";mso-fareast-font-family:"Times New Roman"'>Australia<o:p></o:p></span></p>
+  </td>
+  <td nowrap style='border-top:none;border-left:none;border-bottom:solid #D6DADC 1.0pt;
+  border-right:solid #D6DADC 1.0pt;mso-border-bottom-alt:solid #D6DADC .75pt;
+  mso-border-right-alt:solid #D6DADC .75pt;padding:3.0pt 3.75pt 3.0pt 3.75pt;
+  height:17.25pt'>
+  <p class=MsoNormal style='margin-bottom:27.0pt'><span style='font-size:8.5pt;
+  font-family:"Times New Roman";mso-fareast-font-family:"Times New Roman"'>16.89501744<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11;mso-yfti-lastrow:yes;height:17.25pt'>
+  <td nowrap style='border-top:none;border-left:none;border-bottom:solid #D6DADC 1.0pt;
+  border-right:solid #D6DADC 1.0pt;mso-border-bottom-alt:solid #D6DADC .75pt;
+  mso-border-right-alt:solid #D6DADC .75pt;background:#F4F8F9;padding:3.0pt 3.75pt 3.0pt 3.75pt;
+  height:17.25pt'>
+  <p class=MsoNormal align=right style='margin-bottom:27.0pt;text-align:right'><b><span
+  style='font-size:8.5pt;font-family:"Times New Roman";mso-fareast-font-family:
+  "Times New Roman";color:black'>10<o:p></o:p></span></b></p>
+  </td>
+  <td nowrap colspan=2 style='border-top:none;border-left:none;border-bottom:
+  solid #D6DADC 1.0pt;border-right:solid #D6DADC 1.0pt;mso-border-bottom-alt:
+  solid #D6DADC .75pt;mso-border-right-alt:solid #D6DADC .75pt;padding:3.0pt 3.75pt 3.0pt 3.75pt;
+  height:17.25pt'>
+  <p class=MsoNormal style='margin-bottom:27.0pt'><span style='font-size:8.5pt;
+  font-family:"Times New Roman";mso-fareast-font-family:"Times New Roman"'>Austria<o:p></o:p></span></p>
+  </td>
+  <td nowrap style='border-top:none;border-left:none;border-bottom:solid #D6DADC 1.0pt;
+  border-right:solid #D6DADC 1.0pt;mso-border-bottom-alt:solid #D6DADC .75pt;
+  mso-border-right-alt:solid #D6DADC .75pt;padding:3.0pt 3.75pt 3.0pt 3.75pt;
+  height:17.25pt'>
+  <p class=MsoNormal style='margin-bottom:27.0pt'><span style='font-size:8.5pt;
+  font-family:"Times New Roman";mso-fareast-font-family:"Times New Roman"'>8.00665468<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <![if !supportMisalignedColumns]>
+ <tr height=0>
+  <td width=37 style='border:none'></td>
+  <td width=100 style='border:none'></td>
+  <td width=37 style='border:none'></td>
+  <td width=62 style='border:none'></td>
+ </tr>
+ <![endif]>
+</table>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Code: <o:p></o:p></b></p>
+
+<p class=MsoNormal>emission &lt;- read.csv(&quot;Emissions.csv&quot;)</p>
+
+<p class=MsoNormal><span class=GramE>emissions[</span>1:10,]</p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shapetype id="_x0000_t75" coordsize="21600,21600"
+ o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f"
+ stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="Picture_x0020_1" o:spid="_x0000_s1039" type="#_x0000_t75"
+ style='position:absolute;margin-left:39.8pt;margin-top:.65pt;width:268.5pt;
+ height:3in;z-index:251658240;visibility:visible;mso-wrap-style:square;
+ mso-width-percent:0;mso-height-percent:0;mso-wrap-distance-left:9pt;
+ mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;
+ mso-wrap-distance-bottom:0;mso-position-horizontal:absolute;
+ mso-position-horizontal-relative:margin;mso-position-vertical:absolute;
+ mso-position-vertical-relative:margin;mso-width-percent:0;
+ mso-height-percent:0;mso-width-relative:margin;mso-height-relative:margin'>
+ <v:imagedata src="SAS%20and%20R%20Data%20Visualization%20Examples.fld/image001.emz"
+  o:title=""/>
+ <w:wrap type="square" anchorx="margin" anchory="margin"/>
+</v:shape><![endif]--><![if !vml]><img width=268 height=216
+src="SAS%20and%20R%20Data%20Visualization%20Examples.fld/image002.png"
+align=left hspace=12 v:shapes="Picture_x0020_1"><![endif]>b.) </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Code: <o:p></o:p></b></p>
+
+<p class=MsoNormal>histo1 &lt;- <span class=SpellE><span class=GramE>hist</span></span><span
+class=GramE>(</span>emission$CO2, right = FALSE )</p>
+
+<p class=MsoNormal>histo1$density &lt;- histo1$counts/sum(histo1$counts)</p>
+
+<p class=MsoNormal><span class=GramE>plot(</span>histo1, <span class=SpellE>freq</span>
+= FALSE, col = &quot;yellow&quot;, main = &quot;Proportions of CO2 for 196
+Countries&quot;, </p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class=SpellE>xlab</span> = &quot;Emissions&quot;, <span
+class=SpellE>ylab</span> = &quot;Proportions of CO2&quot;)</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>c.) The shape of the distribution for the histogram of CO2
+emissions is right skewed or positively skewed. </p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="Picture_x0020_2" o:spid="_x0000_s1038"
+ type="#_x0000_t75" style='position:absolute;margin-left:30.95pt;margin-top:351.2pt;
+ width:243.15pt;height:230.95pt;z-index:251659264;visibility:visible;
+ mso-wrap-style:square;mso-width-percent:0;mso-height-percent:0;
+ mso-wrap-distance-left:9pt;mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;
+ mso-wrap-distance-bottom:0;mso-position-horizontal:absolute;
+ mso-position-horizontal-relative:margin;mso-position-vertical:absolute;
+ mso-position-vertical-relative:margin;mso-width-percent:0;
+ mso-height-percent:0;mso-width-relative:margin;mso-height-relative:margin'>
+ <v:imagedata src="SAS%20and%20R%20Data%20Visualization%20Examples.fld/image003.emz"
+  o:title=""/>
+ <w:wrap type="square" anchorx="margin" anchory="margin"/>
+</v:shape><![endif]--><![if !vml]><img width=243 height=231
+src="SAS%20and%20R%20Data%20Visualization%20Examples.fld/image004.png"
+align=left hspace=12 v:shapes="Picture_x0020_2"><![endif]></p>
+
+<p class=MsoNormal>d.) </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>The density curve depicts <span class=GramE>the majority of</span>
+the data residing in the lower end of the distribution. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Code: <o:p></o:p></b></p>
+
+<p class=MsoNormal>lines(density(histo1)), col = 'green', <span class=SpellE>lwd</span>
+= 2)</p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="Picture_x0020_3" o:spid="_x0000_s1037"
+ type="#_x0000_t75" style='position:absolute;margin-left:31.05pt;margin-top:.4pt;
+ width:272.45pt;height:279.2pt;z-index:251660288;visibility:visible;
+ mso-wrap-style:square;mso-width-percent:0;mso-height-percent:0;
+ mso-wrap-distance-left:9pt;mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;
+ mso-wrap-distance-bottom:0;mso-position-horizontal:absolute;
+ mso-position-horizontal-relative:margin;mso-position-vertical:absolute;
+ mso-position-vertical-relative:margin;mso-width-percent:0;
+ mso-height-percent:0;mso-width-relative:margin;mso-height-relative:margin'>
+ <v:imagedata src="SAS%20and%20R%20Data%20Visualization%20Examples.fld/image005.emz"
+  o:title=""/>
+ <w:wrap type="square" anchorx="margin" anchory="margin"/>
+</v:shape><![endif]--><![if !vml]><img width=273 height=280
+src="SAS%20and%20R%20Data%20Visualization%20Examples.fld/image006.png"
+align=left hspace=12 v:shapes="Picture_x0020_3"><![endif]></p>
+
+<p class=MsoNormal>e.) </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Code: <o:p></o:p></b></p>
+
+<p class=MsoNormal><span class=GramE>boxplot(</span>emission$CO2, horizontal =
+T, col = 'yellow',</p>
+
+<p class=MsoNormal><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>main
+= &quot;Distribution of CO2 Emissions in 196 Countries&quot;,</p>
+
+<p class=MsoNormal><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+class=SpellE>xlab</span> = &quot;Emissions&quot;)</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>f.) </p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.5in'><span
+style='mso-spacerun:yes'>&nbsp;</span>15.12582468 15.63945701 15.93043014</p>
+
+<p class=MsoNormal style='text-indent:.5in'>[187] 16.07231908 16.24094876
+16.89501744 19.27885668 23.08459255 23.85571308</p>
+
+<p class=MsoNormal style='text-indent:.5in'>[193] 24.65637052 25.23698426
+29.72496084 49.18262350</p>
+
+<p class=MsoNormal style='text-indent:.5in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='text-indent:.5in'>13 outliers are presented. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Code: </p>
+
+<p class=MsoNormal>outliers &lt;- <span class=GramE>sort(</span>emission$CO2,
+decreasing = T, (<span class=SpellE>obs</span> = 13))</p>
+
+<p class=MsoNormal>print(outliers) </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>2.) <o:p></o:p></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="Picture_x0020_4" o:spid="_x0000_s1036"
+ type="#_x0000_t75" alt="../Desktop/Screen%20Shot%202020-04-05%20at%208.21.29%20PM.png"
+ style='position:absolute;margin-left:40.05pt;margin-top:.5pt;width:294.3pt;
+ height:221.05pt;z-index:251661312;visibility:visible;mso-wrap-style:square;
+ mso-width-percent:0;mso-height-percent:0;mso-wrap-distance-left:9pt;
+ mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;
+ mso-wrap-distance-bottom:0;mso-position-horizontal:absolute;
+ mso-position-horizontal-relative:margin;mso-position-vertical:absolute;
+ mso-position-vertical-relative:margin;mso-width-percent:0;
+ mso-height-percent:0;mso-width-relative:margin;mso-height-relative:margin'>
+ <v:imagedata src="SAS%20and%20R%20Data%20Visualization%20Examples.fld/image007.png"
+  o:title="../Desktop/Screen%20Shot%202020-04-05%20at%208.21.29%20PM.png"/>
+ <w:wrap type="square" anchorx="margin" anchory="margin"/>
+</v:shape><![endif]--><![if !vml]><img width=294 height=221
+src="SAS%20and%20R%20Data%20Visualization%20Examples.fld/image008.png"
+align=left hspace=12
+alt="../Desktop/Screen%20Shot%202020-04-05%20at%208.21.29%20PM.png" v:shapes="Picture_x0020_4"><![endif]></p>
+
+<p class=MsoNormal>a.) </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Code:<o:p></o:p></b></p>
+
+<p class=p1><span class=s1><b>DATA</b></span> spiders;</p>
+
+<p class=p2><span class=apple-tab-span><span style='color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span
+class=s3>INFILE</span><span class=s2> </span>'c:/Users/thardma3/Desktop/Spiders.csv'<span
+class=s2> </span><span class=s3>DLM</span><span class=s2> = </span>','</p>
+
+<p class=p3><span class=apple-tab-span><span style='color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span>FIRSTOBS<span
+class=s2> = </span><span class=s4><b>2</b></span><span class=s2>;</span></p>
+
+<p class=p1><span class=apple-tab-span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+class=s3>INPUT</span> Length Sex $;<span class=apple-converted-space>&nbsp;</span></p>
+
+<p class=p4><b>RUN</b><span class=s2>;</span><span class=apple-converted-space><span
+style='color:black'>&nbsp;</span></span></p>
+
+<p class=p5><o:p>&nbsp;</o:p></p>
+
+<p class=p1><span class=s1><b>PROC</b></span> <span class=s1><b>SGPLOT</b></span>
+<span class=s3>DATA</span> = spiders;</p>
+
+<p class=p1><span class=apple-tab-span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+class=s3>HISTOGRAM</span> Length / <span class=s3>SCALE</span> = COUNT <span
+class=s3>BINWIDTH</span> = <span class=s4><b>5</b></span>;</p>
+
+<p class=p2><span class=apple-tab-span><span style='color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span
+class=s3>XAXIS</span><span class=s2> </span><span class=s3>LABEL</span><span
+class=s2> = </span>'Length of Spiders'<span class=s2>;</span><span
+class=apple-converted-space><span style='color:black'>&nbsp;</span></span></p>
+
+<p class=p2><span class=apple-tab-span><span style='color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span
+class=s3>YAXIS</span><span class=s2> </span><span class=s3>LABEL</span><span
+class=s2> = </span>'Number of Spiders'<span class=s2>;</span></p>
+
+<p class=p2><span class=apple-tab-span><span style='color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span
+class=s3>TITLE</span><span class=s2> </span>'Length of Male and Female Spiders'<span
+class=s2>;</span></p>
+
+<p class=p4><b>RUN</b><span class=s2>; </span><span
+class=apple-converted-space><span style='color:black'>&nbsp;</span></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>b.) The shape of the length variable distribution is
+partially left skewed or negatively skewed, with outlier spider lengths between
+0-10 mm, and takes on a bimodal distribution. </p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="Picture_x0020_5" o:spid="_x0000_s1035"
+ type="#_x0000_t75" alt="../Desktop/Screen%20Shot%202020-04-05%20at%209.35.19%20PM.png"
+ style='position:absolute;margin-left:58pt;margin-top:414pt;width:261.05pt;
+ height:175.7pt;z-index:251662336;visibility:visible;mso-wrap-style:square;
+ mso-width-percent:0;mso-height-percent:0;mso-wrap-distance-left:9pt;
+ mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;
+ mso-wrap-distance-bottom:0;mso-position-horizontal:absolute;
+ mso-position-horizontal-relative:margin;mso-position-vertical:absolute;
+ mso-position-vertical-relative:margin;mso-width-percent:0;
+ mso-height-percent:0;mso-width-relative:margin;mso-height-relative:margin'>
+ <v:imagedata src="SAS%20and%20R%20Data%20Visualization%20Examples.fld/image009.png"
+  o:title="../Desktop/Screen%20Shot%202020-04-05%20at%209.35.19%20PM.png"/>
+ <w:wrap type="square" anchorx="margin" anchory="margin"/>
+</v:shape><![endif]--><![if !vml]><img width=261 height=176
+src="SAS%20and%20R%20Data%20Visualization%20Examples.fld/image010.png"
+align=left hspace=12
+alt="../Desktop/Screen%20Shot%202020-04-05%20at%209.35.19%20PM.png" v:shapes="Picture_x0020_5"><![endif]></p>
+
+<p class=MsoNormal>c.) </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Code: <o:p></o:p></b></p>
+
+<p class=MsoNormal><b><span style='font-size:7.5pt;font-family:"Courier New";
+color:#011993'>PROC</span></b><span style='font-size:7.5pt;font-family:"Courier New"'>
+<b><span style='color:#011993'>SGPANEL</span></b> <span style='color:#0433FF'>DATA</span>
+= spiders;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:7.5pt;font-family:"Courier New"'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+class=SpellE><span style='color:#0433FF'>panelby</span></span> Sex / <span
+style='color:#0433FF'>rows</span> = <b><span style='color:#009193'>2</span></b>
+<span style='color:#0433FF'>layout</span> = <span class=SpellE>rowlattice</span>;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:7.5pt;font-family:"Courier New";
+color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:7.5pt;font-family:"Courier New";color:#0433FF'>HISTOGRAM</span><span
+style='font-size:7.5pt;font-family:"Courier New";color:black'> Length / </span><span
+style='font-size:7.5pt;font-family:"Courier New";color:#0433FF'>SCALE</span><span
+style='font-size:7.5pt;font-family:"Courier New";color:black'> = COUNT </span><span
+style='font-size:7.5pt;font-family:"Courier New";color:#0433FF'>BINWIDTH</span><span
+style='font-size:7.5pt;font-family:"Courier New";color:black'> = </span><b><span
+style='font-size:7.5pt;font-family:"Courier New";color:#009193'>5</span></b><span
+style='font-size:7.5pt;font-family:"Courier New";color:black'> </span><span
+style='font-size:7.5pt;font-family:"Courier New";color:#0433FF'>BINSTART</span><span
+style='font-size:7.5pt;font-family:"Courier New";color:black'> = </span><b><span
+style='font-size:7.5pt;font-family:"Courier New";color:#009193'>5.25</span></b><span
+style='font-size:7.5pt;font-family:"Courier New";color:black'>;</span><span
+style='font-size:7.5pt;font-family:"Courier New";color:#0433FF'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:7.5pt;font-family:"Courier New"'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='color:#0433FF'>DENSITY</span> Length;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:7.5pt;font-family:"Courier New";
+color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+class=SpellE><span style='font-size:7.5pt;font-family:"Courier New";color:#0433FF'>TITLE</span><span
+style='font-size:7.5pt;font-family:"Courier New";color:#942193'>'Comparison</span></span><span
+style='font-size:7.5pt;font-family:"Courier New";color:#942193'> of Length of
+Male and Female Spiders'</span><span style='font-size:7.5pt;font-family:"Courier New";
+color:black'>;&nbsp;</span><span style='font-size:7.5pt;font-family:"Courier New";
+color:#942193'><o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:7.5pt;font-family:"Courier New";
+color:#011993'>RUN</span></b><span style='font-size:7.5pt;font-family:"Courier New";
+color:black'>;&nbsp;</span><span style='font-size:7.5pt;font-family:"Courier New";
+color:#011993'><o:p></o:p></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>d.)<span style='mso-spacerun:yes'>&nbsp; </span>The
+distribution for the female spiders is somewhat normal with slight left
+skewness. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>The distribution
+for the male spiders is unimodal with one bin.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>e.) </p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="Picture_x0020_6" o:spid="_x0000_s1034"
+ type="#_x0000_t75" alt="../Desktop/Screen%20Shot%202020-04-05%20at%209.46.53%20PM.png"
+ style='position:absolute;margin-left:31.2pt;margin-top:117pt;width:407.1pt;
+ height:305.8pt;z-index:251663360;visibility:visible;mso-wrap-style:square;
+ mso-width-percent:0;mso-height-percent:0;mso-wrap-distance-left:9pt;
+ mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;
+ mso-wrap-distance-bottom:0;mso-position-horizontal:absolute;
+ mso-position-horizontal-relative:margin;mso-position-vertical:absolute;
+ mso-position-vertical-relative:margin;mso-width-percent:0;
+ mso-height-percent:0;mso-width-relative:margin;mso-height-relative:margin'>
+ <v:imagedata src="SAS%20and%20R%20Data%20Visualization%20Examples.fld/image011.png"
+  o:title="../Desktop/Screen%20Shot%202020-04-05%20at%209.46.53%20PM.png"/>
+ <w:wrap type="square" anchorx="margin" anchory="margin"/>
+</v:shape><![endif]--><![if !vml]><img width=407 height=306
+src="SAS%20and%20R%20Data%20Visualization%20Examples.fld/image012.png"
+align=left hspace=12
+alt="../Desktop/Screen%20Shot%202020-04-05%20at%209.46.53%20PM.png" v:shapes="Picture_x0020_6"><![endif]></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Code: <o:p></o:p></b></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="Picture_x0020_7" o:spid="_x0000_s1033"
+ type="#_x0000_t75" alt="../Desktop/Screen%20Shot%202020-04-05%20at%209.52.55%20PM.png"
+ style='position:absolute;margin-left:4.25pt;margin-top:440.95pt;width:270.05pt;
+ height:75pt;z-index:251664384;visibility:visible;mso-wrap-style:square;
+ mso-width-percent:0;mso-height-percent:0;mso-wrap-distance-left:9pt;
+ mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;
+ mso-wrap-distance-bottom:0;mso-position-horizontal:absolute;
+ mso-position-horizontal-relative:margin;mso-position-vertical:absolute;
+ mso-position-vertical-relative:margin;mso-width-percent:0;
+ mso-height-percent:0;mso-width-relative:margin;mso-height-relative:margin'>
+ <v:imagedata src="SAS%20and%20R%20Data%20Visualization%20Examples.fld/image013.png"
+  o:title="../Desktop/Screen%20Shot%202020-04-05%20at%209.52.55%20PM.png"/>
+ <w:wrap type="square" anchorx="margin" anchory="margin"/>
+</v:shape><![endif]--><![if !vml]><img width=270 height=75
+src="SAS%20and%20R%20Data%20Visualization%20Examples.fld/image014.png"
+align=left hspace=12
+alt="../Desktop/Screen%20Shot%202020-04-05%20at%209.52.55%20PM.png" v:shapes="Picture_x0020_7"><![endif]></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>f.) The sex that has greater variability in length are the
+female spiders, with lengths between 20 and 43 mm, this is because their
+distribution spans a wider range. The male spiders have a very small range of
+lengths between 0 and 10 mm. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>3.) <o:p></o:p></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="Picture_x0020_8" o:spid="_x0000_s1032"
+ type="#_x0000_t75" style='position:absolute;margin-left:31.05pt;margin-top:-8.6pt;
+ width:297.05pt;height:241.9pt;z-index:251665408;visibility:visible;
+ mso-wrap-style:square;mso-width-percent:0;mso-height-percent:0;
+ mso-wrap-distance-left:9pt;mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;
+ mso-wrap-distance-bottom:0;mso-position-horizontal:absolute;
+ mso-position-horizontal-relative:margin;mso-position-vertical:absolute;
+ mso-position-vertical-relative:margin;mso-width-percent:0;
+ mso-height-percent:0;mso-width-relative:margin;mso-height-relative:margin'>
+ <v:imagedata src="SAS%20and%20R%20Data%20Visualization%20Examples.fld/image015.emz"
+  o:title=""/>
+ <w:wrap type="square" anchorx="margin" anchory="margin"/>
+</v:shape><![endif]--><![if !vml]><img width=297 height=242
+src="SAS%20and%20R%20Data%20Visualization%20Examples.fld/image016.png"
+align=left hspace=12 v:shapes="Picture_x0020_8"><![endif]>a.) </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Code: <o:p></o:p></b></p>
+
+<p class=MsoNormal>prop &lt;- table(<span class=SpellE>steak$Preference</span>)</p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE>barplot</span></span><span
+class=GramE>(</span>prop, main = 'Distribution of Steak Preferences', <span
+class=SpellE>xlab</span> = 'Preferences',</p>
+
+<p class=MsoNormal><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+class=SpellE>ylab</span> = 'Steak Eaters')</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>b.) </p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="Picture_x0020_15" o:spid="_x0000_s1031"
+ type="#_x0000_t75" alt="../Desktop/Screen%20Shot%202020-04-05%20at%2011.54.59%20PM.png"
+ style='position:absolute;margin-left:31.05pt;margin-top:360.4pt;width:262.85pt;
+ height:196.6pt;z-index:251672576;visibility:visible;mso-wrap-style:square;
+ mso-width-percent:0;mso-height-percent:0;mso-wrap-distance-left:9pt;
+ mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;
+ mso-wrap-distance-bottom:0;mso-position-horizontal:absolute;
+ mso-position-horizontal-relative:margin;mso-position-vertical:absolute;
+ mso-position-vertical-relative:margin;mso-width-percent:0;
+ mso-height-percent:0;mso-width-relative:margin;mso-height-relative:margin'>
+ <v:imagedata src="SAS%20and%20R%20Data%20Visualization%20Examples.fld/image017.png"
+  o:title="../Desktop/Screen%20Shot%202020-04-05%20at%2011.54.59%20PM.png"/>
+ <w:wrap type="square" anchorx="margin" anchory="margin"/>
+</v:shape><![endif]--><![if !vml]><img width=263 height=197
+src="SAS%20and%20R%20Data%20Visualization%20Examples.fld/image018.png"
+align=left hspace=12
+alt="../Desktop/Screen%20Shot%202020-04-05%20at%2011.54.59%20PM.png" v:shapes="Picture_x0020_15"><![endif]></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Code: <o:p></o:p></b></p>
+
+<p class=MsoNormal><b><span style='font-size:7.5pt;font-family:"Courier New";
+color:#011993'>PROC</span></b><span style='font-size:7.5pt;font-family:"Courier New"'>
+<b><span style='color:#011993'>SGPLOT</span></b> <span style='color:#0433FF'>DATA</span>
+= steaks;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:7.5pt;font-family:"Courier New"'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='color:#0433FF'>VBAR</span> Preference / <span style='color:#0433FF'>CATEGORYORDER</span>
+= RESPDESC;&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:7.5pt;font-family:"Courier New";
+color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:7.5pt;font-family:"Courier New";color:#0433FF'>LABEL</span><span
+style='font-size:7.5pt;font-family:"Courier New";color:black'> Preference = </span><span
+style='font-size:7.5pt;font-family:"Courier New";color:#942193'>'Preference of
+Steak'</span><span style='font-size:7.5pt;font-family:"Courier New";color:black'>;</span><span
+style='font-size:7.5pt;font-family:"Courier New";color:#942193'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:7.5pt;font-family:"Courier New";
+color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:7.5pt;font-family:"Courier New";color:#0433FF'>YAXIS</span><span
+style='font-size:7.5pt;font-family:"Courier New";color:black'> </span><span
+style='font-size:7.5pt;font-family:"Courier New";color:#0433FF'>LABEL</span><span
+style='font-size:7.5pt;font-family:"Courier New";color:black'> = </span><span
+style='font-size:7.5pt;font-family:"Courier New";color:#942193'>'Differently
+Aged People'</span><span style='font-size:7.5pt;font-family:"Courier New";
+color:black'>;</span><span style='font-size:7.5pt;font-family:"Courier New";
+color:#942193'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:7.5pt;font-family:"Courier New";
+color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:7.5pt;font-family:"Courier New";color:#0433FF'>TITLE</span><span
+style='font-size:7.5pt;font-family:"Courier New";color:black'> </span><span
+style='font-size:7.5pt;font-family:"Courier New";color:#942193'>' Preferences
+of Steak Style Cooked'</span><span style='font-size:7.5pt;font-family:"Courier New";
+color:black'>;</span><span style='font-size:7.5pt;font-family:"Courier New";
+color:#942193'><o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:7.5pt;font-family:"Courier New";
+color:#011993'>RUN</span></b><span style='font-size:7.5pt;font-family:"Courier New";
+color:black'>;&nbsp;</span><span style='font-size:7.5pt;font-family:"Courier New";
+color:#011993'><o:p></o:p></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="Picture_x0020_16" o:spid="_x0000_s1030"
+ type="#_x0000_t75" alt="../Desktop/Screen%20Shot%202020-04-05%20at%2011.57.24%20PM.png"
+ style='position:absolute;margin-left:40.1pt;margin-top:26.7pt;width:305pt;
+ height:229.25pt;z-index:251673600;visibility:visible;mso-wrap-style:square;
+ mso-width-percent:0;mso-height-percent:0;mso-wrap-distance-left:9pt;
+ mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;
+ mso-wrap-distance-bottom:0;mso-position-horizontal:absolute;
+ mso-position-horizontal-relative:margin;mso-position-vertical:absolute;
+ mso-position-vertical-relative:margin;mso-width-percent:0;
+ mso-height-percent:0;mso-width-relative:margin;mso-height-relative:margin'>
+ <v:imagedata src="SAS%20and%20R%20Data%20Visualization%20Examples.fld/image019.png"
+  o:title="../Desktop/Screen%20Shot%202020-04-05%20at%2011.57.24%20PM.png"/>
+ <w:wrap type="square" anchorx="margin" anchory="margin"/>
+</v:shape><![endif]--><![if !vml]><img width=305 height=229
+src="SAS%20and%20R%20Data%20Visualization%20Examples.fld/image020.png"
+align=left hspace=12
+alt="../Desktop/Screen%20Shot%202020-04-05%20at%2011.57.24%20PM.png" v:shapes="Picture_x0020_16"><![endif]>c.)
+</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="Picture_x0020_11" o:spid="_x0000_s1029"
+ type="#_x0000_t75" style='position:absolute;margin-left:31.15pt;margin-top:270.2pt;
+ width:309.1pt;height:287.25pt;z-index:251668480;visibility:visible;
+ mso-wrap-style:square;mso-width-percent:0;mso-height-percent:0;
+ mso-wrap-distance-left:9pt;mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;
+ mso-wrap-distance-bottom:0;mso-position-horizontal:absolute;
+ mso-position-horizontal-relative:margin;mso-position-vertical:absolute;
+ mso-position-vertical-relative:margin;mso-width-percent:0;
+ mso-height-percent:0;mso-width-relative:margin;mso-height-relative:margin'>
+ <v:imagedata src="SAS%20and%20R%20Data%20Visualization%20Examples.fld/image021.emz"
+  o:title=""/>
+ <w:wrap type="square" anchorx="margin" anchory="margin"/>
+</v:shape><![endif]--><![if !vml]><img width=309 height=287
+src="SAS%20and%20R%20Data%20Visualization%20Examples.fld/image022.png"
+align=left hspace=12 v:shapes="Picture_x0020_11"><![endif]></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Code: <o:p></o:p></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>SAS:<o:p></o:p></b></p>
+
+<p class=MsoNormal><b><span style='font-size:7.5pt;font-family:"Courier New";
+color:#011993'>PROC</span></b><span style='font-size:7.5pt;font-family:"Courier New"'>
+<b><span style='color:#011993'>GCHART</span></b> <span style='color:#0433FF'>DATA</span>
+= WORK.STEAK;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:7.5pt;font-family:"Courier New";
+color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:7.5pt;font-family:"Courier New";color:#0433FF'>PIE</span><span
+style='font-size:7.5pt;font-family:"Courier New";color:black'> Preference / </span><span
+style='font-size:7.5pt;font-family:"Courier New";color:#0433FF'>NOHEADER</span><span
+style='font-size:7.5pt;font-family:"Courier New";color:black'> </span><span
+style='font-size:7.5pt;font-family:"Courier New";color:#0433FF'>VALUE</span><span
+style='font-size:7.5pt;font-family:"Courier New";color:black'> = </span><span
+style='font-size:7.5pt;font-family:"Courier New";color:#0433FF'>INSIDE</span><span
+style='font-size:7.5pt;font-family:"Courier New";color:black'> </span><span
+style='font-size:7.5pt;font-family:"Courier New";color:#0433FF'>TYPE</span><span
+style='font-size:7.5pt;font-family:"Courier New";color:black'> = </span><span
+style='font-size:7.5pt;font-family:"Courier New";color:#0433FF'>PERCENT</span><span
+style='font-size:7.5pt;font-family:"Courier New";color:black'>;</span><span
+style='font-size:7.5pt;font-family:"Courier New";color:#0433FF'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:7.5pt;font-family:"Courier New";
+color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:7.5pt;font-family:"Courier New";color:#0433FF'>TITLE</span><span
+style='font-size:7.5pt;font-family:"Courier New";color:black'> </span><span
+style='font-size:7.5pt;font-family:"Courier New";color:#942193'>'Pie Chart of Steak
+Preferences'</span><span style='font-size:7.5pt;font-family:"Courier New";
+color:black'>;</span><span style='font-size:7.5pt;font-family:"Courier New";
+color:#942193'><o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:7.5pt;font-family:"Courier New";
+color:#011993'>RUN</span></b><span style='font-size:7.5pt;font-family:"Courier New";
+color:black'>;&nbsp;</span><span style='font-size:7.5pt;font-family:"Courier New";
+color:#011993'><o:p></o:p></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>R Studio: <o:p></o:p></b></p>
+
+<p class=MsoNormal><span class=SpellE>pct</span> &lt;- round(<span
+class=SpellE>cellcounts</span>/sum(<span class=SpellE>cellcounts</span>)*100)</p>
+
+<p class=MsoNormal><span class=SpellE>lbls</span> &lt;- <span class=GramE>paste(</span>c('Medium',
+'Medium Well', 'Rare', 'Well'), &quot; &quot;, <span class=SpellE>pct</span>,
+'%', <span class=SpellE>sep</span> = &quot;&quot;)</p>
+
+<p class=MsoNormal><span class=GramE>pie(</span><span class=SpellE>cellcounts</span>,
+labels = <span class=SpellE>lbls</span>, col =rainbow(length(<span
+class=SpellE>lbls</span>)),</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+</span>main = &quot;Distribution of Steak Preferences&quot;)</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>d.) The steak preference that is most popular is medium
+style steaks: medium, medium well, medium rare. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="Picture_x0020_12" o:spid="_x0000_s1028"
+ type="#_x0000_t75" alt="../Desktop/Screen%20Shot%202020-04-05%20at%2011.29.51%20PM.png"
+ style='position:absolute;margin-left:31pt;margin-top:162.2pt;width:360.05pt;
+ height:270.8pt;z-index:251669504;visibility:visible;mso-wrap-style:square;
+ mso-width-percent:0;mso-height-percent:0;mso-wrap-distance-left:9pt;
+ mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;
+ mso-wrap-distance-bottom:0;mso-position-horizontal:absolute;
+ mso-position-horizontal-relative:margin;mso-position-vertical:absolute;
+ mso-position-vertical-relative:margin;mso-width-percent:0;
+ mso-height-percent:0;mso-width-relative:margin;mso-height-relative:margin'>
+ <v:imagedata src="SAS%20and%20R%20Data%20Visualization%20Examples.fld/image023.png"
+  o:title="../Desktop/Screen%20Shot%202020-04-05%20at%2011.29.51%20PM.png"/>
+ <w:wrap type="square" anchorx="margin" anchory="margin"/>
+</v:shape><![endif]--><![if !vml]><img width=360 height=271
+src="SAS%20and%20R%20Data%20Visualization%20Examples.fld/image024.png"
+align=left hspace=12
+alt="../Desktop/Screen%20Shot%202020-04-05%20at%2011.29.51%20PM.png" v:shapes="Picture_x0020_12"><![endif]>e.)
+</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Code: <o:p></o:p></b></p>
+
+<p class=MsoNormal><b><span style='font-size:7.5pt;font-family:"Courier New";
+color:#011993'>PROC</span></b><span style='font-size:7.5pt;font-family:"Courier New"'>
+<b><span style='color:#011993'>SGPLOT</span></b> <span style='color:#0433FF'>DATA</span>
+= WORK.STEAK;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:7.5pt;font-family:"Courier New"'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='color:#0433FF'>VBAR</span> Lottery / <span style='color:#0433FF'>GROUP</span>
+= Preference <span style='color:#0433FF'>GROUPDISPLAY</span> = CLUSTER;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:7.5pt;font-family:"Courier New";
+color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:7.5pt;font-family:"Courier New";color:#0433FF'>LABEL</span><span
+style='font-size:7.5pt;font-family:"Courier New";color:black'> Lottery = </span><span
+style='font-size:7.5pt;font-family:"Courier New";color:#942193'>'Lottery A or
+B'</span><span style='font-size:7.5pt;font-family:"Courier New";color:black'>;</span><span
+style='font-size:7.5pt;font-family:"Courier New";color:#942193'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:7.5pt;font-family:"Courier New";
+color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:7.5pt;font-family:"Courier New";color:#0433FF'>YAXIS</span><span
+style='font-size:7.5pt;font-family:"Courier New";color:black'> </span><span
+style='font-size:7.5pt;font-family:"Courier New";color:#0433FF'>LABEL</span><span
+style='font-size:7.5pt;font-family:"Courier New";color:black'> = </span><span
+style='font-size:7.5pt;font-family:"Courier New";color:#942193'>'Individuals
+Eating Steak'</span><span style='font-size:7.5pt;font-family:"Courier New";
+color:black'>;</span><span style='font-size:7.5pt;font-family:"Courier New";
+color:#942193'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:7.5pt;font-family:"Courier New";
+color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:7.5pt;font-family:"Courier New";color:#0433FF'>TITLE</span><span
+style='font-size:7.5pt;font-family:"Courier New";color:black'> </span><span
+style='font-size:7.5pt;font-family:"Courier New";color:#942193'>' Grouped Data
+of Lottery A/B and Diff. Steak Preferences'</span><span style='font-size:7.5pt;
+font-family:"Courier New";color:black'>;</span><span style='font-size:7.5pt;
+font-family:"Courier New";color:#942193'><o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:7.5pt;font-family:"Courier New";
+color:#011993'>RUN</span></b><span style='font-size:7.5pt;font-family:"Courier New";
+color:black'>;&nbsp;</span><span style='font-size:7.5pt;font-family:"Courier New";
+color:#011993'><o:p></o:p></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="Picture_x0020_13" o:spid="_x0000_s1027"
+ type="#_x0000_t75" style='position:absolute;margin-left:31.05pt;margin-top:.2pt;
+ width:280.3pt;height:279.2pt;z-index:251670528;visibility:visible;
+ mso-wrap-style:square;mso-width-percent:0;mso-height-percent:0;
+ mso-wrap-distance-left:9pt;mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;
+ mso-wrap-distance-bottom:0;mso-position-horizontal:absolute;
+ mso-position-horizontal-relative:margin;mso-position-vertical:absolute;
+ mso-position-vertical-relative:margin;mso-width-percent:0;
+ mso-height-percent:0;mso-width-relative:margin;mso-height-relative:margin'>
+ <v:imagedata src="SAS%20and%20R%20Data%20Visualization%20Examples.fld/image025.emz"
+  o:title=""/>
+ <w:wrap type="square" anchorx="margin" anchory="margin"/>
+</v:shape><![endif]--><![if !vml]><img width=280 height=279
+src="SAS%20and%20R%20Data%20Visualization%20Examples.fld/image026.png"
+align=left hspace=12 v:shapes="Picture_x0020_13"><![endif]>f.) </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Code: <o:p></o:p></b></p>
+
+<p class=MsoNormal><span class=SpellE>twowaycounts</span> &lt;- <span
+class=GramE>table(</span><span class=SpellE>steak$Preference</span>, <span
+class=SpellE>steak$Lottery</span>)</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE>spineplot</span></span><span
+class=GramE>(</span><span class=SpellE>twowaycounts</span>, main = &quot;<span
+class=SpellE>Spinogram</span> of Lottery Group for Steak Eaters&quot;)</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="Picture_x0020_14" o:spid="_x0000_s1026"
+ type="#_x0000_t75" alt="../Desktop/Screen%20Shot%202020-04-05%20at%2011.42.05%20PM.png"
+ style='position:absolute;margin-left:31pt;margin-top:404.95pt;width:351.05pt;
+ height:263.85pt;z-index:251671552;visibility:visible;mso-wrap-style:square;
+ mso-width-percent:0;mso-height-percent:0;mso-wrap-distance-left:9pt;
+ mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;
+ mso-wrap-distance-bottom:0;mso-position-horizontal:absolute;
+ mso-position-horizontal-relative:margin;mso-position-vertical:absolute;
+ mso-position-vertical-relative:margin;mso-width-percent:0;
+ mso-height-percent:0;mso-width-relative:margin;mso-height-relative:margin'>
+ <v:imagedata src="SAS%20and%20R%20Data%20Visualization%20Examples.fld/image027.png"
+  o:title="../Desktop/Screen%20Shot%202020-04-05%20at%2011.42.05%20PM.png"/>
+ <w:wrap type="square" anchorx="margin" anchory="margin"/>
+</v:shape><![endif]--><![if !vml]><img width=351 height=264
+src="SAS%20and%20R%20Data%20Visualization%20Examples.fld/image028.png"
+align=left hspace=12
+alt="../Desktop/Screen%20Shot%202020-04-05%20at%2011.42.05%20PM.png" v:shapes="Picture_x0020_14"><![endif]>g.)
+</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Code: <o:p></o:p></b></p>
+
+<p class=MsoNormal><b><span style='font-size:7.5pt;font-family:"Courier New";
+color:#011993'>PROC</span></b><span style='font-size:7.5pt;font-family:"Courier New"'>
+<b><span style='color:#011993'>SGPLOT</span></b> <span style='color:#0433FF'>DATA</span>
+= WORK.STEAK;&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:7.5pt;font-family:"Courier New"'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='color:#0433FF'>VBAR</span> Preference / <span style='color:#0433FF'>GROUP</span>
+= Lottery <span style='color:#0433FF'>GROUPDISPLAY</span> = CLUSTER;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:7.5pt;font-family:"Courier New";
+color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:7.5pt;font-family:"Courier New";color:#0433FF'>LABEL</span><span
+style='font-size:7.5pt;font-family:"Courier New";color:black'> Preference = </span><span
+style='font-size:7.5pt;font-family:"Courier New";color:#942193'>'Steak
+Preference'</span><span style='font-size:7.5pt;font-family:"Courier New";
+color:black'>;</span><span style='font-size:7.5pt;font-family:"Courier New";
+color:#942193'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:7.5pt;font-family:"Courier New";
+color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:7.5pt;font-family:"Courier New";color:#0433FF'>YAXIS</span><span
+style='font-size:7.5pt;font-family:"Courier New";color:black'> </span><span
+style='font-size:7.5pt;font-family:"Courier New";color:#0433FF'>LABEL</span><span
+style='font-size:7.5pt;font-family:"Courier New";color:black'> = </span><span
+style='font-size:7.5pt;font-family:"Courier New";color:#942193'>'Individuals
+Eating Steak'</span><span style='font-size:7.5pt;font-family:"Courier New";
+color:black'>;</span><span style='font-size:7.5pt;font-family:"Courier New";
+color:#942193'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:7.5pt;font-family:"Courier New";
+color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:7.5pt;font-family:"Courier New";color:#0433FF'>TITLE</span><span
+style='font-size:7.5pt;font-family:"Courier New";color:black'> </span><span
+style='font-size:7.5pt;font-family:"Courier New";color:#942193'>'Grouped Data
+of Steak Preference by Lottery Group'</span><span style='font-size:7.5pt;
+font-family:"Courier New";color:black'>;</span><span style='font-size:7.5pt;
+font-family:"Courier New";color:#942193'><o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:7.5pt;font-family:"Courier New";
+color:#011993'>RUN</span></b><span style='font-size:7.5pt;font-family:"Courier New";
+color:black'>;&nbsp;</span><span style='font-size:7.5pt;font-family:"Courier New";
+color:#011993'><o:p></o:p></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>
